@@ -19,6 +19,7 @@ class AuthController extends Controller
         $user = User::create([
             'name' => $validated['name'],
             'email' => $validated['email'],
+            // 'password' => bcrypt($validated['password']), => We don't use bcrypt here we already use hashed password in User model
             'password' => $validated['password'],
         ]);
 
